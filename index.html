@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Pedido de Bolo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Fazer Pedido de Bolo</h1>
+  <form id="pedidoForm">
+    <fieldset>
+      <legend>Dados do Cliente</legend>
+      <label for="nome">Nome do cliente:</label>
+      <input type="text" id="nome" name="nome" required><br>
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" required><br>
+    </fieldset>
+    <fieldset>
+      <legend>Tipo de Pedido</legend>
+      <label for="tipo">Tipo de pedido:</label>
+      <select id="tipo" name="tipo" required>
+        <option value="retirada">Retirada</option>
+        <option value="delivery">Delivery</option>
+      </select><br>
+      <div id="deliveryFields" class="oculto">
+        <label for="endereco">Rua:</label>
+        <input type="text" id="endereco" name="endereco"><br>
+        <label for="numero">Número:</label>
+        <input type="text" id="numero" name="numero"><br>
+        <label for="bairro">Bairro:</label>
+        <input type="text" id="bairro" name="bairro"><br>
+        <label for="observacoes">Observações:</label>
+        <input type="text" id="observacoes" name="observacoes" placeholder="Opcional"><br>
+        <label for="valorEntrega">Valor da entrega:</label>
+        <select id="valorEntrega" name="valorEntrega">
+          <option value="7">R$7,00</option>
+          <option value="10">R$10,00</option>
+          <option value="12">R$12,00</option>
+          <option value="15">R$15,00</option>
+        </select><br>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Data e Horário</legend>
+      <label for="dataPedido">Data do pedido:</label>
+      <input type="date" id="dataPedido" name="dataPedido" required><br>
+      <label for="horaPedido">Horário:</label>
+      <input type="text" id="horaPedido" name="horaPedido" placeholder="Ex: Manhã, 10h, Tarde etc." required><br>
+    </fieldset>
+    <fieldset>
+      <legend>Informações do Bolo</legend>
+      <label for="tamanho">Tamanho do bolo:</label>
+      <select id="tamanho" name="tamanho" required>
+        <option value="mini">Mini</option>
+        <option value="pequeno">Pequeno</option>
+        <option value="médio">Médio</option>
+        <option value="grande">Grande</option>
+      </select><br>
+      <label for="sabor">Sabor do bolo:</label>
+      <select id="sabor" name="sabor" required></select><br>
+    </fieldset>
+    <button type="submit">Enviar Pedido</button>
+    <button type="reset">Limpar Formulário</button>
+  </form>
+  <div id="comprovante" style="display:none; margin-top:30px;"></div>
+  <script src="script.js"></script>
+</body>
+</html>
