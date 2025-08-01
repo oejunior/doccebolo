@@ -53,7 +53,13 @@ window.onload = () => {
       const infoTamanho = informacoesTamanhos[tamanho];
       const precoBolo = precosBolos[sabor][tamanho];
       const valorEntrega = tipo === "delivery" ? parseFloat(document.getElementById("valorEntrega").value) : 0;
-      const total = precoBolo + valorEntrega;
+      const adiantamento = parseFloat(document.getElementById("adiantamento").value) || 0;
+      const totalOriginal = precoBolo + valorEntrega;
+      if (adiantamento > totalOriginal) {
+        alert('O valor do adiantamento não pode ser maior que o total do pedido.');
+        return;
+      }
+      const total = totalOriginal - adiantamento;
 
       const pedido = {
         nome: document.getElementById("nome").value,
@@ -69,6 +75,7 @@ window.onload = () => {
         sabor,
         precoBolo,
         valorEntrega,
+        adiantamento,
         total
       };
 
