@@ -9,7 +9,14 @@
 <body>
   <img src="logo.png" alt="Logo Docce" class="logo-docce">
 <h1>Bolos da Docce</h1>
-  <div class="tabs">
+  
+<nav class="tab-nav">
+  <button class="tab-button active" onclick="showTab('cliente')">Cliente</button>
+  <button class="tab-button" onclick="showTab('entrega')">Entrega</button>
+  <button class="tab-button" onclick="showTab('bolo')">Bolo</button>
+  <button class="tab-button" onclick="showTab('pagamento')">Pagamento</button>
+</nav>
+<div class="tab-content cliente-tab">
     <button class="tab-button active" onclick="openTab(event, 'cliente')">Cliente</button>
     <button class="tab-button" onclick="openTab(event, 'entrega')">Entrega</button>
     <button class="tab-button" onclick="openTab(event, 'bolo')">Bolo</button>
