@@ -1,3 +1,10 @@
+
+function openTab(evt, tabId) {
+  document.querySelectorAll('.tab-content').forEach(div => div.classList.remove('active'));
+  document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+  document.getElementById(tabId).classList.add('active');
+  evt.currentTarget.classList.add('active');
+}
 const listaDeBolos = [
   "Red Velvet", "Black Cake", "Gargamel", "Olho de Sogra", "Bolo Chamego",
   "Frutas Vermelhas", "Dois Amores", "Floresta Negra", "Ninho, Morango e Chocolate",
