@@ -138,14 +138,3 @@ function formatarData(dataISO) {
   const [ano, mes, dia] = dataISO.split('-');
   return `${dia}/${mes} ${diaSemana}`;
 }
-
-document.querySelectorAll('.tab-button').forEach(button => {
-  button.addEventListener('click', () => {
-    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-    document.querySelectorAll('.tab-section').forEach(section => section.classList.remove('active'));
-
-    button.classList.add('active');
-    const target = button.getAttribute('data-tab');
-    document.getElementById('tab-' + target).classList.add('active');
-  });
-});
