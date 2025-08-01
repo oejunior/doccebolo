@@ -11,12 +11,14 @@
 <h1>Bolos da Docce</h1>
   
 <nav class="tab-nav">
-  <button class="tab-button active" onclick="showTab('cliente')">Cliente</button>
-  <button class="tab-button" onclick="showTab('entrega')">Entrega</button>
-  <button class="tab-button" onclick="showTab('bolo')">Bolo</button>
-  <button class="tab-button" onclick="showTab('pagamento')">Pagamento</button>
+  <button class="tab-button active" data-tab="cliente">Cliente</button>
+  <button class="tab-button" data-tab="entrega">Entrega</button>
+  <button class="tab-button" data-tab="bolo">Bolo</button>
+  <button class="tab-button" data-tab="pagamento">Pagamento</button>
 </nav>
-<div class="tab-content cliente-tab">
+<div class="tab-content">
+  <div id="tab-cliente" class="tab-section active">
+
     <button class="tab-button active" onclick="openTab(event, 'cliente')">Cliente</button>
     <button class="tab-button" onclick="openTab(event, 'entrega')">Entrega</button>
     <button class="tab-button" onclick="openTab(event, 'bolo')">Bolo</button>
